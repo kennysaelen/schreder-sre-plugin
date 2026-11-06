@@ -1,0 +1,158 @@
+{
+    "batchEvents": [
+        {
+            "id": "Batch00001",
+            "name": "BatchTaskStart",
+            "description": "Triggered when a batch task or job starts.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "BatchTaskId": { "type": "string", "description": "The unique identifier for the batch task." },
+                "ClassName": { "type": "string", "description": "The name of the class processing the batch." },
+                "Critical": { "type": "boolean", "description": "Indicates if the batch task is critical." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "GroupId": { "type": "string", "description": "The unique identifier for the batch group." },
+                "InfoMessage": { "type": "string", "description": "An informational message providing additional context about the event." },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "Priority": { "type": "int", "description": "The priority level of the batch task." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        },
+        {
+            "id": "Batch00002",
+            "name": "BatchTaskFinished",
+            "description": "Triggered when a batch task finishes.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "BatchTaskId": { "type": "string", "description": "The unique identifier for the batch task." },
+                "ClassName": { "type": "string", "description": "The name of the class processing the batch." },
+                "Critical": { "type": "string", "description": "Indicates if the batch task is critical." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "GroupId": { "type": "string", "description": "The unique identifier for the batch group." },
+                "InfoMessage": { "type": "string", "description": "An informational message providing additional context about the event." },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "Priority": { "type": "string", "description": "The priority level of the batch task." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "elapsedMilliseconds": { "type": "string", "description": "The total time taken to complete the batch task in milliseconds." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        },
+        {
+            "id": "Batch00003",
+            "name": "BatchTaskFailure",
+            "description": "Triggered when a batch task fails.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "BatchTaskId": { "type": "string", "description": "The unique identifier for the batch task." },
+                "CallStack": { "type": "string", "description": "The call stack at the time of the event." },
+                "ClassName": { "type": "string", "description": "The name of the class processing the batch." },
+                "Critical": { "type": "boolean", "description": "Indicates if the batch task is critical." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExceptionMessage": { "type": "string", "description": "The message of the exception that caused the batch task to fail." },
+                "ExceptionSource": { "type": "string", "description": "The source of the exception that caused the batch task to fail." },
+                "ExceptionType": { "type": "string", "description": "The type of the exception that caused the batch task to fail." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        },
+        {
+            "id": "Batch00005",
+            "name": "BatchThrottled",
+            "description": "Contains information about batch tasks that were throttled due to resource limits or policy constraints.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "InfoMessage": {
+                    "type": "string",
+                    "description": "An informational message providing additional context about the event. This contains a JSON with child fields.",
+                    "childFields": {
+                        "CurrentMachineCpu": { "type": "string", "description": "The current CPU usage of the machine processing the batch tasks." },
+                        "CurrentMachineMemory": { "type": "string", "description": "The current memory usage of the machine processing the batch tasks." },
+                        "CurrentSqlDtu": { "type": "string", "description": "The current SQL Database Transaction Units (DTU) usage." }
+                    }
+                },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        },
+        {
+            "id": "Batch00006",
+            "name": "BatchQueuesDetails",
+            "description": "Provides details about the priority based scheduling batch queues. Each queue type is represented value in the customDimensions field.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "InfoMessage": {
+                    "type": "string",
+                    "description": "An informational message providing additional context about the event. This contains a JSON with child fields: BatchCriticalSchedulingQueue, BatchHighSchedulingQueue, BatchLowSchedulingQueue, BatchNormalSchedulingQueue, BatchReservedCapacitySchedulingQueue, ReadyTasksBuffer, ReadyTasksBufferWithPriorities",
+                    "childFields": {
+                        "BatchCriticalSchedulingQueue": { "type": "string", "description": "The number of tasks in the critical scheduling queue." },
+                        "BatchHighSchedulingQueue": { "type": "string", "description": "The number of tasks in the high scheduling queue." },
+                        "BatchLowSchedulingQueue": { "type": "string", "description": "The number of tasks in the low scheduling queue." },
+                        "BatchNormalSchedulingQueue": { "type": "string", "description": "The number of tasks in the normal scheduling queue." },
+                        "BatchReservedCapacitySchedulingQueue": { "type": "string", "description": "The number of tasks in the reserved capacity scheduling queue." },
+                        "ReadyTasksBuffer": { "type": "string", "description": "The number of tasks in the ready tasks buffer." },
+                        "ReadyTasksBufferWithPriorities": { "type": "string", "description": "The number of tasks in the ready tasks buffer with priorities." }
+                    }
+                },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        },
+        {
+            "id": "Batch00007",
+            "name": "BatchThreadInfo",
+            "description": "Contains information about the batch processing threads that are in use, available for processing, and total available threads.",
+            "customDimensions": {
+                "BatchJobCaption": { "type": "datetime", "description": "The description of the batch job as it is named in the batch jobs in Dynamics 365." },
+                "BatchJobId": { "type": "string", "description": "The unique identifier for the batch job." },
+                "EventMessage": { "type": "string", "description": "A message providing additional context about the event." },
+                "ExecutionMode": { "type": "string", "description": "The execution mode specifying whether a workload is processed in batch or processed interactively." },
+                "InfoMessage": {
+                    "type": "string",
+                    "description": "An informational message providing additional context about the event. This contains a JSON with child fields.",
+                    "childFields": {
+                        "CurrentBatchTasks": { "type": "int", "description": "The number of batch tasks currently being processed." },
+                        "TaskQueueCount": { "type": "int", "description": "The number of tasks currently in the queue waiting to be processed." },
+                        "MaxThreadCount": { "type": "int", "description": "The maximum number of threads available for processing batch tasks." },
+                        "ReservedNumberOfThreads": { "type": "int", "description": "The number of threads reserved for high-priority tasks." }
+                    }
+                },
+                "LegalEntity": { "type": "string", "description": "The unique identifier for the legal entity." },
+                "UserGuid": { "type": "string", "description": "The unique identifier for the user who initiated the batch task." },
+                "aadTenantId": { "type": "string", "description": "The Azure Active Directory tenant ID associated with the event." },
+                "activityId": { "type": "string", "description": "The unique identifier for the activity. The activityId can be used to correlate different events and exception that were fired in the same activity." },
+                "environmentId": { "type": "string", "description": "The unique identifier for the environment." },
+                "eventId": { "type": "string", "description": "The unique identifier for the event as known by the batch service." }
+            }
+        }
+    ]
+}

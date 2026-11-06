@@ -1,0 +1,58 @@
+{
+    "title": "Application Insights General Schema",
+    "description": "General basic schema for common tables in Application Insights. This schema is agnostic to any specific application and can be used as a starting point for understanding the data structure of Application Insights telemetry data.",
+    "tables": {
+        "customEvents": {
+            "description": "Contains custom events logged by the application. Most of the batch monitoring data is logged as custom events.",
+            "fields": {
+                "timestamp": { "type": "datetime" , "description": "The time when the event was logged." },
+                "name": { "type": "string", "description": "The name of the event." },
+                "customDimensions": { "type": "object", "description": "Custom dimensions associated with the event. This will contain key-value pairs of additional informational fields. This is the most important field for understanding the context of the event. Further details of the custom dimensions per event will be added in the schema definition." },
+                "session_Id": { "type": "string", "description": "The session ID associated with the event." },
+                "user_Id": { "type": "string", "description": "The user ID associated with the event. This will contain a Dynamics 365 user ID." },
+                "application_Version": { "type": "string", "description": "The version of the application." },
+                "client_Type": { "type": "string", "description": "The type of client (e.g., Browser, Mobile)." },
+                "client_IP": { "type": "string", "description": "The IP address of the client." },
+                "client_City": { "type": "string", "description": "The city of the client." },
+                "client_StateOrProvince": { "type": "string", "description": "The state or province of the client." },
+                "client_CountryOrRegion": { "type": "string", "description": "  The country or region of the client." },
+                "client_Browser": { "type": "string", "description": "The browser used by the client." },
+                "cloud_RoleName": { "type": "string", "description": "The role name of the cloud service." },
+                "cloud_RoleInstance": { "type": "string", "description": "The instance name of the cloud service." },
+                "appId": { "type": "string", "description": "The application ID." },
+                "appName": { "type": "string", "description": "The application name." },
+                "iKey": { "type": "string", "description": "The instrumentation key." },
+                "sdkVersion": { "type": "string", "description": "The version of the SDK." },
+                "itemId": { "type": "string", "description": "The unique identifier for the event." },
+                "itemCount": { "type": "int", "description": "The count of items associated with the event." }
+            }
+        },
+        "exceptions": {
+            "description": "Contains exception telemetry logged by the application.",
+            "fields": {
+                "timestamp": { "type": "datetime" , "description": "The time when the event was logged." },
+                "type": { "type": "string" , "description": "The type of the exception." },
+                "method": { "type": "string" , "description": "The method where the exception occurred." },
+                "outerMessage": { "type": "string" , "description": "The outer message of the exception." },
+                "customDimensions": { "type": "object", "description": "Custom dimensions associated with the exception. This will contain key-value pairs of additional informational fields. This is the most important field for understanding the context of the exception. Further details of the custom dimensions per exception will be added in the schema definition." },
+                "session_Id": { "type": "string", "description": "The session ID associated with the exception." },
+                "user_Id": { "type": "string", "description": "The user ID associated with the exception. This will contain a Dynamics 365 user ID." },
+                "application_Version": { "type": "string", "description": "The version of the application." },
+                "client_Type": { "type": "string", "description": "The type of client (e.g., Browser, Mobile)." },
+                "client_IP": { "type": "string", "description": "The IP address of the client." },
+                "client_City": { "type": "string", "description": "The city of the client." },
+                "client_StateOrProvince": { "type": "string", "description": "The state or province of the client." },
+                "client_CountryOrRegion": { "type": "string", "description": "The country or region of the client." },
+                "client_Browser": { "type": "string", "description": "The browser used by the client." },
+                "cloud_RoleName": { "type": "string", "description": "The role name of the cloud service." },
+                "cloud_RoleInstance": { "type": "string", "description": "The instance name of the cloud service." },
+                "appId": { "type": "string", "description": "The application ID." },
+                "appName": { "type": "string", "description": "The application name." },
+                "iKey": { "type": "string", "description": "The instrumentation key." },
+                "sdkVersion": { "type": "string", "description": "The version of the SDK." },
+                "itemId": { "type": "string", "description": "The unique identifier for the exception." },
+                "itemCount": { "type": "int", "description": "The count of items associated with the exception." }
+            }
+        }
+    }
+}
